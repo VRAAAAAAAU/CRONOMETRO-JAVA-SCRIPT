@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="watch">
+      <div>
+        <span id="hour">00</span>
+        <span class="time">hour</span>
+      </div>
+      <div>
+        <span id="minutes">00</span>
+        <span class="time">minutes</span>
+      </div>
+      <div id="test">
+        <span id="seconds">00</span>
+        <span class="time">seconds</span>
+      </div>
+    </div>
+    <div id="buttons">
+      <button id="startid" class="button-40"  onclick="fStart()">Start</button>
+      <button id="pauseid" class="button-40"  onclick="fPause()">Pause</button>
+      <button id="stopid"  class="button-40"  onclick="fStop()">Stop</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
