@@ -2,28 +2,34 @@ let hr = 0;
 let min = 0;
 let sec = 0;
 var interval = 0;
+var run = 0;
 
 function twoDigits(digit) {
   if (digit < 10) {
     return "0" + digit;
   }
-  
+
   return digit;
 }
 
 function fStart() {
-  interval = setInterval(counter, 1000);
+  if (run == 0) {
+    interval = setInterval(counter, 1000);
+  }
+  run = 1;
 }
 
 function fPause() {
   clearInterval(interval);
+  run = 0;
 }
 
 function fStop() {
   hr = 0;
   min = 0;
   sec = 0;
-  window.document.getElementById("seconds").innerText = "00" ;
+  run = 0;
+  window.document.getElementById("seconds").innerText = "00";
   window.document.getElementById("minutes").innerText = "00";
   window.document.getElementById("hour").innerText = "00";
 }
